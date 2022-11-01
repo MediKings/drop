@@ -95,7 +95,7 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">{{prod.name}}</a></h6>
+                            <h6><a href="{% url 'home:detail' prod.slug %}">{{prod.name}}</a></h6>
                             <h5>{{prod.price}} Fc</h5>
                         </div>
                     </div>
