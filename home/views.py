@@ -23,3 +23,9 @@ def Detail(request, slug):
         'products': products,
         }
     return render(request, template_name, context)
+
+
+def Contact(request):
+    template_name = 'home/contact.html'
+    context = {}
+    return render(request, template_name, context)
