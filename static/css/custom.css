@@ -136,7 +136,7 @@ ol {
 
 .set-bg {
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 	background-position: top center;
 }
 
@@ -862,6 +862,12 @@ ol {
 	position: relative;
 	overflow: hidden;
 	background-position: center center;
+}
+
+@media all and (max-width: 768px){
+	.featured__item__pic {
+		height: 180px;
+	}
 }
 
 .featured__item__pic__hover {

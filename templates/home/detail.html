@@ -3,6 +3,9 @@
 {% block title %}Accueil{% endblock %}
 {% block content %}
 
+    
+    {% include 'home/includes/categories_other.html' %}
+
     <!-- Product Details Section Begin -->
     <section class="product-details spad">
         <div class="container">
@@ -63,7 +66,7 @@
             </div>
             <div class="row">
                 {% for prod in products %}
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
                     <div class="product__item">
                         <div class="product__item__pic set-bg" data-setbg="{{prod.image.url}}">
                             <ul class="product__item__pic__hover">

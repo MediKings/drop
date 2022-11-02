@@ -7,40 +7,19 @@
     <section class="hero">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
-                    <div class="hero__categories">
-                        <div class="hero__categories__all">
-                            <i class="fa fa-bars"></i>
-                            <span>Catégories</span>
-                        </div>
-                        <ul>
-                            <li><a href="#">Habillement</a></li>
-                            <li><a href="#">Télévision</a></li>
-                            <li><a href="#">Ordinateur</a></li>
-                            <li><a href="#">Outils scolaire</a></li>
-                            <li><a href="#">Alimentaire</a></li>
-                            <li><a href="#">Voyage</a></li>
-                            <li><a href="#">Maison</a></li>
-                            <li><a href="#">Automobile</a></li>
-                            <li><a href="#">Electronique</a></li>
-                            <li><a href="#">Decoration</a></li>
-                            <li><a href="#">Accessoires</a></li>
-                        </ul>
-                    </div>
-                </div>
+                
+                {% include 'home/includes/categories_home.html' %}
+                {% include 'home/includes/categories_other.html' %}
+
                 <div class="col-lg-9">
                     <div class="hero__search">
                         <div class="hero__search__form">
                             <form action="#">
-                                <div class="hero__search__categories">
-                                    Toutes les catégories
-                                    <span class="arrow_carrot-down"></span>
-                                </div>
                                 <input type="text" placeholder="De quoi avez-vous besoin ?">
-                                <button type="submit" class="site-btn">Recherche</button>
+                                <button type="submit" class="site-btn"><i class="fa fa-search"></i></button>
                             </form>
                         </div>
-                        <div class="hero__search__phone">
+                        <div class="hero__search__phone d-none d-lg-block">
                             <div class="hero__search__phone__icon">
                                 <i class="fa fa-phone"></i>
                             </div>
@@ -54,8 +33,6 @@
                         <div class="hero__text">
                             <span>FRUIT FRAICHE</span>
                             <h2>Végetal <br />100% Organique</h2>
-                            <p>Livraison gratuite disponible</p>
-                            <a href="#" class="primary-btn">Ajouter au panier</a>
                         </div>
                     </div>
                 </div>
@@ -70,7 +47,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Nos Produits</h2>
+                        <h2>Nos Articles</h2>
                     </div>
                     <!-- <div class="featured__controls">
                         <ul>
@@ -85,7 +62,7 @@
             </div>
             <div class="row featured__filter">
                 {% for prod in products %}
-                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                <div class="col-lg-3 col-md-4 col-6 mix oranges fresh-meat">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="{{prod.image.url}}">
                             <ul class="featured__item__pic__hover">
